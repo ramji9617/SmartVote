@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="Items"
+            type="com.example.voting.VoterModel" />
+
+
+    </data>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    tools:ignore="SpUsage"
+   android:paddingHorizontal="10dp"
+    android:background="@drawable/listbackground"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="19dp"
+            android:text="@{Items.candidate}"
+            android:textColor="@color/dark_grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="16dp"
+            android:text="@{Items.party}"
+            android:textColor="@color/gry"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:imageRes="@{Items.imgLogo}"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_marginHorizontal="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:backgroundTint="@color/grey"
+        android:gravity="center"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</LinearLayout>
+
+</layout>

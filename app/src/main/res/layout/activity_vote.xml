@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:id="@+id/main"
+    tools:ignore="SpUsage"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoteActivity">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Candidate List"
+      android:layout_margin="30dp"
+      android:gravity="center"
+      android:textColor="@color/black"
+      android:textSize="24dp"
+      tools:ignore="HardcodedText" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerview"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="15dp"
+      android:background="@drawable/listbackground"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+</LinearLayout>
+
+</layout>

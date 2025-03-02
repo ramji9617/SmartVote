@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <import type="androidx.databinding.ObservableField"/>
+
+
+        <variable
+            name="LoginActivity"
+            type="com.example.voting.LoginActivity" />
+
+        <variable
+            name="isMobile"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="aadharNumber"
+            type="java.lang.String" />
+
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        tools:ignore="SpUsage"
+        android:background="@color/light_grey"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="82dp"
+            android:layout_marginHorizontal="5dp"
+            android:contentDescription="this is emblem of india"
+            android:src="@drawable/emblem_of_india"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="12dp"
+            android:background="@color/dark_grey" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="logo icon"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/poll_online_vote_icon"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/smartvote"
+                android:textColor="@color/deep_blue"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_vote_is_your_voice"
+                android:textColor="@color/deep_blue"
+                android:textSize="14dp"
+                tools:ignore="TextSizeCheck" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="center_vertical"
+        android:backgroundTint="@android:color/background_light"
+        android:elevation="5dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="false"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="50dp"
+            android:clickable="false"
+            android:text="@string/it_takes_just_a_minute"
+            android:textColor="@color/gry"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="90dp"
+            android:clickable="false"
+            android:text="@string/enter_your_aadhar_number"
+            android:textColor="@color/dark_grey"
+            android:textSize="17dp"
+            app:drawableEndCompat="@drawable/aadhaar"
+            tools:ignore="TextSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="@{isMobile ? View.VISIBLE : View.GONE}"
+                android:textSize="25dp"
+                android:textColor="@color/grey"
+                android:paddingTop="3dp"
+                android:text="@{aadharNumber ?? null }"
+                android:gravity="center"/>
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/otpTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+              android:layout_margin="6dp"
+                android:visibility="@{isMobile ? View.GONE : View.VISIBLE}"
+                app:bar_inactive_color="@color/gry"
+                android:layout_weight="1"
+                android:background="@drawable/ic_otp_background"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                app:bar_enabled="true"
+                app:bar_height="2dp"
+                app:bar_active_color="@color/dark_grey"
+                app:height="50dp"
+                app:hide_otp="false"
+                app:length="4"
+                app:otp_text_size="19dp"
+                app:width="15dp" />
+
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/otpTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:visibility="@{isMobile ? View.GONE : View.VISIBLE}"
+                android:background="@drawable/ic_otp_background"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                app:bar_enabled="true"
+                app:bar_active_color="@color/dark_grey"
+                app:bar_inactive_color="@color/gry"
+                app:bar_height="2dp"
+                app:height="50dp"
+                app:hide_otp="false"
+                app:length="4"
+                app:otp_text_size="19dp"
+                app:width="15dp" />
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/otpTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:visibility="@{isMobile ? View.GONE : View.VISIBLE}"
+                app:bar_active_color="@color/dark_grey"
+                app:bar_inactive_color="@color/gry"
+                android:background="@drawable/ic_otp_background"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                app:bar_enabled="true"
+                app:bar_height="2dp"
+                app:height="50dp"
+                app:hide_otp="false"
+                app:length="4"
+                app:otp_text_size="19dp"
+                app:width="15dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="195dp"
+            android:clickable="false"
+            android:text="@string/smartvote_uses_aadhar_enable_authentication"
+            android:textColor="@color/gry"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/showOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="235dp"
+            android:clickable="false"
+          android:paddingHorizontal="70dp"
+            android:text="@string/enter_otp_here"
+             android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+          android:drawableEnd="@drawable/baseline_diamond_24"
+            tools:ignore="TextSizeCheck,UseCompatTextViewDrawableXml" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="290dp"
+            android:visibility="gone"
+            android:gravity="center">
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/otpEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:otp_text_size="19dp"
+            app:hide_otp="false"
+           app:otp_box_background="@drawable/ic_otp_background"
+            app:bar_height="2dp"
+            android:importantForAutofill="yes"
+            app:bar_enabled="false"
+            android:textColor="@color/black"
+            app:length="6"
+            app:width="35dp"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/resendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="370dp"
+            android:visibility="invisible"
+            android:text="@string/resend_otp"
+            android:textColor="@android:color/background_dark"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/otpTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="370dp"
+            android:clickable="false"
+            android:gravity="end"
+            android:paddingHorizontal="30dp"
+            android:text="@string/_60s"
+            android:visibility="invisible"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_background"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/gry"
+            android:textSize="17dp"
+            tools:ignore="TextContrastCheck,TextSizeCheck,VisualLintButtonSize" />
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/contactUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="@string/contact_us"
+            android:layout_marginVertical="30dp"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

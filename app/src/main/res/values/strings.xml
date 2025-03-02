@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">voting</string>
+    <string name="smartvote">SmartVote</string>
+    <string name="your_vote_is_your_voice">Your vote is your voice</string>
+    <string name="sign_up">Sign up</string>
+    <string name="it_takes_just_a_minute">It takes just a minute</string>
+    <string name="enter_your_aadhar_number">Enter your Aadhar Number</string>
+    <string name="smartvote_uses_aadhar_enable_authentication">SmartVote uses Aadhar enable authentication</string>
+    <string name="enter_otp_here">Enter otp here</string>
+    <string name="resend_otp">resend otp!!</string>
+    <string name="_60s">60s</string>
+    <string name="contact_us">Contact us</string>
+    <string name="next">Next</string>
+    <string name="election_commission_of_india">Election commission of india</string>
+    <string name="confirmation" >Confirmation</string>
+
+</resources>

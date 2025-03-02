@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "320977204206",
+    "project_id": "smartvote-fb62b",
+    "storage_bucket": "smartvote-fb62b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320977204206:android:b356d4c1d1e703a510d4ff",
+        "android_client_info": {
+          "package_name": "com.example.voting"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMAKfC2ZQlMapsuQtfXgyPhPlYFwCHlI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

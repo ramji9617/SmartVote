@@ -1,0 +1,47 @@
+[versions]
+firebaseBom = "33.5.1"
+kotlin = "1.9.24"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+lottie = "6.6.8"
+lottiedialog = "1.0.0"
+lottieVersion = "6.6.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.1.4"
+okhttp = "4.12.0"
+otpview = "v1.1.2-ktx"
+googleGmsGoogleServices = "4.4.2"
+firebaseFirestore = "25.1.1"
+sdkForAndroid = "6.0.0"
+sdkForAndroidVersion = "5.1.0"
+agp = "8.7.2"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+lottie-v660 = { module = "com.airbnb.android:lottie", version.ref = "lottieVersion" }
+lottiedialog = { module = "io.github.amrdeveloper:lottiedialog", version.ref = "lottiedialog" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+otpview = { module = "com.github.aabhasr1:OtpView", version.ref = "otpview" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+sdk-for-android = { module = "io.appwrite:sdk-for-android", version.ref = "sdkForAndroid" }
+sdk-for-android-v510 = { module = "io.appwrite:sdk-for-android", version.ref = "sdkForAndroidVersion" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt"}
